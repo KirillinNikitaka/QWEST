@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title></title>
+</head>
+<body>
+  <div class="container start">
+    <img src="door.png" class="w-25 door1">
+    <img src="door2.png" class="w-25 door2">
+    <img src="door3.png" class="w-25 door3">
+  </div>
+  <div class="Bikini_Bottom" style="background-image: url(lol.jpg); height: 1000px; display: none; background-size: 100% 100%">
+    <h1 style="font-size: 50px; color: white">Помоги Губке Бобу найти его Крабсбургер! Надо заработать 3 очка!</h1>
+    <h1 style="font-size: 50px; color: white" class="score_text1">
+      0
+    </h1>
+    <button class="btn_harrypotter btn btn-success BIXOD1">Выйти из игры</button>
+    <img src="food.png" class="food">
+    <img src="food.png" class="food1">
+    <img src="food.png" class="food2">
+  </div>
+  <div class="Hoggwarts" style="background-image: url(bg.jpg); height: 800px; display: none;">
+    <h1 style="font-size: 50px; color: white">Помоги Гарри Поттеру найти его метлу палочку и мантию-невидимку! Надо заработать 3 очка!</h1>
+    <h1 style="font-size: 50px; color: white" class="score_text">
+      0
+    </h1>
+    <button class="btn_harrypotter btn btn-success BIXOD">Выйти из игры</button>
+    <img src="palochka.png" style="width: 100px; position: absolute; margin-left: 2px; margin-top: -200px;" class="palochka">;
+    <img src="metla.png" style="width: 100px; position: absolute;  margin-left: 300px; margin-top: 470px;" class="metla">;
+    <img src="mantiya.png" style="width: 100px; position: absolute;  margin-left: 400px; margin-top: px;" class="mantiya">;
+    <img src="gun.png" style="width: 100px; position: absolute;  margin-left: 500px; margin-top: 100px;" class="gun">;
+    <img src="ring.png" style="width: 100px; position: absolute;" class="ring">;
+  </div>
+
+
+  <div class="container lol" style="background-image: url(qest.jpg);">
+    <button class="btn_harrypotter btn btn-success BIXOD3">Выйти из игры</button>
+    <div class="vopros1">
+      <div class="px=3 py=3 border">1 вопрос: Кто был чемпионом от школы Дурмстранг?</div>
+      <div class="px=3 py=3 border otvet1">Виктор Крам</div>
+      <div class="px=3 py=3 border otvet2">Вулфрик</div>
+      <div class="px=3 py=3 border otvet3">Седрик Диггори</div>
+  </div>
+    
+
+    <div class="vopros2" style="display: none;">
+      <div class="px=3 py=3 border">2 вопрос: Кто из Мародёров оказался предателем?</div>
+      <div class="px=3 py=3 border otvet4">
+Сириус Блэк</div>
+      <div class="px=3 py=3 border otvet5">Питтер Петтигрю</div>
+      <div class="px=3 py=3 border otvet6">Брайан Чен</div>
+     </div>
+
+    <div class="vopros3" style="display: none;">
+      <div class="px=3 py=3 border">3 вопрос: На кого, помимо Гарри Поттера, указывало пророчество?</div>
+      <div class="px=3 py=3 border otvet7">Невилл Лонгботтом</div>
+      <div class="px=3 py=3 border otvet8">Илон МАСК</div>
+      <div class="px=3 py=3 border otvet9">Рон Уизли?</div>
+    </div>
+
+    
+  <script type="text/javascript">
+    let score =0
+
+    document.querySelector(".door3").onclick = function(){
+    alert("Вы попали в тест на знание ГАРРИ ПОТТЕРА"),
+    document.querySelector(".start").style.display = "none",
+    document.querySelector(".lol").style.display = "block"
+  }
+
+
+  	document.querySelector(".door2").onclick = function(){
+    alert("Вы попали в Бикини Боттом"),
+    document.querySelector(".start").style.display = "none",
+    document.querySelector(".Bikini_Bottom").style.display = "block"
+  }
+    document.querySelector(".door1").onclick = function(){
+    alert("Вы попали в Хогвартс"),
+    document.querySelector(".start").style.display = "none",
+    document.querySelector(".Hoggwarts").style.display = "block"
+  }
+    document.querySelector(".metla").onclick = function(){
+     document.querySelector(".metla").style.display = "none"
+     score = score +1;
+     document.querySelector(".score_text").innerHTML=score
+
+
+   }
+
+    document.querySelector(".palochka").onclick = function(){
+     document.querySelector(".palochka").style.display = "none"
+     score = score +1
+     document.querySelector(".score_text").innerHTML=score
+
+   }
+
+    document.querySelector(".mantiya").onclick = function(){
+     document.querySelector(".mantiya").style.display = "none"
+     score = score +1
+     document.querySelector(".score_text").innerHTML=score
+
+   }
+
+   document.querySelector(".BIXOD").onclick = function(){
+    alert("Вы вышли из Хогвартса"),
+    document.querySelector(".start").style.display = "block",
+    document.querySelector(".Hoggwarts").style.display = "none"
+  }
+
+   document.querySelector(".gun").onclick = function(){
+    alert("Неправильно")
+   }
+   document.querySelector(".ring").onclick = function(){
+    alert("Неправильно")
+   }
+
+
+   document.querySelector(".food").onclick = function(){
+     document.querySelector(".food").style.display = "none"
+     score = score +1
+     document.querySelector(".score_text1").innerHTML=score
+   }
+   document.querySelector(".food1").onclick = function(){
+     document.querySelector(".food1").style.display = "none"
+     score = score +1
+     document.querySelector(".score_text1").innerHTML=score
+   }
+
+    document.querySelector(".food2").onclick = function(){
+     document.querySelector(".food2").style.display = "none"
+     score = score +1
+     document.querySelector(".score_text1").innerHTML=score
+   }
+
+   document.querySelector(".BIXOD1").onclick = function(){
+    alert("Вы вышли из Бикини Боттома"),
+    document.querySelector(".start").style.display = "block",
+    document.querySelector(".Bikini_Bottom").style.display = "none"
+  }
+
+
+
+  document.querySelector(".otvet1").onclick =function(){
+    alert("верно");
+    document.querySelector(".vopros2").style.display = "block";
+    document.querySelector(".vopros1").style.display = "none";
+  }
+  document.querySelector(".otvet2").onclick =function(){
+    alert("неверно")
+  }
+  document.querySelector(".otvet3").onclick =function(){
+    alert("неверно")
+  }
+
+
+
+  document.querySelector(".otvet4").onclick =function(){
+    alert("неверно");
+    
+  }
+  document.querySelector(".otvet5").onclick =function(){
+    alert("верно")
+    document.querySelector(".vopros3").style.display = "block";
+    document.querySelector(".vopros2").style.display = "none";
+  }
+  document.querySelector(".otvet6").onclick =function(){
+    alert("неверно")
+  }
+
+
+  document.querySelector(".otvet7").onclick =function(){
+    alert("верно");
+    document.querySelector(".vopros4").style.display = "block";
+    document.querySelector(".vopros3").style.display = "none";
+    
+  }
+  document.querySelector(".otvet8").onclick =function(){
+    alert("неверно")
+  }
+  document.querySelector(".otvet9").onclick =function(){
+    alert("неверно")
+  }
+
+  document.querySelector(".BIXOD3").onclick = function(){
+    alert("Вы вышли из Теста"),
+    document.querySelector(".start").style.display = "block",
+    document.querySelector(".lol").style.display = "none"
+  }
+
+  </script>
+</body>
